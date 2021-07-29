@@ -1,37 +1,59 @@
-main {
-    margin-left: auto;
-    margin-right: auto;
-    width: 1100px;
+html {
+    background: url("./assets/bgphoto.jpg") no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
 }
 
-h1 {
-    font-size: 70px;
-    margin-bottom: 15px;
-    margin-right: 35px;
-    margin-top: 30px;
-    text-align: center;
-    font-family: 'Montserrat', sans-serif;
-    text-shadow: 3px 3px 4px black;
+html, body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+}
+
+.content {
+    width: fit-content;
+    height: fit-content;
+    padding: 5px;
+    border: 5px dashed black;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 50%;
+    transform: translate(0, -50%);
+    margin: auto;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+}
+
+.social-media-links {
+    justify-self: center;
 }
 
 .album-cover {
-    width: 500px;
+    width: 420px;
 }
+
 .social-media-logo {
-    width: 50px;
-    /* box-shadow: 0 0 5px black; */
+    width: 136px;
 }
 
-
-.backgroundVideo {
-    opacity: 50%;
-    position: absolute;
-    width: 100%;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    z-index: -1;
-    filter: brightness(60%);
-
+@media (max-height: 885px) {
+    .container {
+        grid-template-columns: 3fr 1fr;
+        align-items: center;
+    }
+    .albums {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+    .social-media-links {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        justify-self: center;
+    }
 }
-
